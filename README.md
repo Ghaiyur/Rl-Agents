@@ -16,5 +16,19 @@ Second, the amount of time required to explore each state to create the required
 
 ![ms1](https://user-images.githubusercontent.com/26713317/125749429-85c9e514-9613-4d01-9a12-d9082f46487a.png)
 
+## BO - Break Out RL
+
+A longstanding goal of artificial intelligence is the development of algorithms capable of
+general competency in a variety of tasks and domains without the need for domain-specific
+tailoring. To this end, different theoretical frameworks have been proposed to formalize the
+notion of “big” artificial intelligence (e.g., Russell, 1997; Hutter, 2005; Legg, 2008). Similar
+ideas have been developed around the theme of lifelong learning: learning a reusable, highlevel understanding of the world from raw sensory data (Thrun & Mitchell, 1995; Pierce &
+Kuipers, 1997; Stober & Kuipers, 2008; Sutton et al., 2011). The growing interest in competitions such as the General Game Playing competition (Genesereth, Love, & Pell, 2005),
+Reinforcement Learning competition (Whiteson, Tanner, & White, 2010), and the International Planning competition (Coles et al., 2012) also suggests the artificial intelligence
+community’s desire for the emergence of algorithms that provide general competency.
+
+### Model Summary 
+
+![ms1](https://user-images.githubusercontent.com/26713317/125749429-85c9e514-9613-4d01-9a12-d9082f46487a.png)
 
 
