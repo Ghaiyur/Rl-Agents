@@ -42,6 +42,6 @@ But the questions are:
 - How do we calculate the values of the Q-table?
 - Are the values available or predefined?
 
-
+![qalgo](https://user-images.githubusercontent.com/26713317/126094661-af71fc21-16d6-4a2e-9ed9-33bec996c66b.png)
 
 
