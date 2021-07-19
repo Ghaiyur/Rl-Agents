@@ -31,4 +31,17 @@ community’s desire for the emergence of algorithms that provide general compet
 
 ![ms1](https://user-images.githubusercontent.com/26713317/125749429-85c9e514-9613-4d01-9a12-d9082f46487a.png)
 
+## Autonomous Taxi - Numpy Q-learning from Scratch 
+
+Q-Table is just a fancy name for a simple lookup table where we calculate the maximum expected future rewards for action at each state. Basically, this table will guide us to the best action at each state.
+
+Each Q-table score will be the maximum expected future reward that the robot will get if it takes that action at that state. This is an iterative process, as we need to improve the Q-Table at each iteration.
+
+But the questions are:
+
+- How do we calculate the values of the Q-table?
+- Are the values available or predefined?
+
+
+
 
