@@ -1,5 +1,5 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGhaiyur%2FRl-Agents&count_bg=%23000000&title_bg=%23000000&icon=probot.svg&icon_color=%23E7E7E7&title=Bots+Visited&edge_flat=false)](https://hits.seeyoufarm.com)
-# Rl-Agents 
+# [Rl-Agents](https://github.com/Ghaiyur/Rl-Agents) 
 
 ## SIRL - Space Invader RL
 
@@ -30,5 +30,18 @@ community’s desire for the emergence of algorithms that provide general compet
 ### Model Summary 
 
 ![ms1](https://user-images.githubusercontent.com/26713317/125749429-85c9e514-9613-4d01-9a12-d9082f46487a.png)
+
+## Autonomous Taxi - Numpy Q-learning from Scratch 
+
+Q-Table is just a fancy name for a simple lookup table where we calculate the maximum expected future rewards for action at each state. Basically, this table will guide us to the best action at each state.
+
+Each Q-table score will be the maximum expected future reward that the robot will get if it takes that action at that state. This is an iterative process, as we need to improve the Q-Table at each iteration.
+
+But the questions are:
+
+- How do we calculate the values of the Q-table?
+- Are the values available or predefined?
+
+![qalgo](https://user-images.githubusercontent.com/26713317/126094661-af71fc21-16d6-4a2e-9ed9-33bec996c66b.png)
 
 
