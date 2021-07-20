@@ -44,4 +44,19 @@ But the questions are:
 
 ![qalgo](https://user-images.githubusercontent.com/26713317/126094661-af71fc21-16d6-4a2e-9ed9-33bec996c66b.png)
 
+## FlappyDQN - Deeper Q- Learning
+
+So, what are the steps involved in reinforcement learning using deep Q-learning networks (DQNs)?
+
+All the past experience is stored by the user in memory
+The next action is determined by the maximum output of the Q-network
+The loss function here is mean squared error of the predicted Q-value and the target Q-value – Q*. This is basically a regression problem. However, we do not know the target or actual value here as we are dealing with a reinforcement learning problem. Going back to the Q-value update equation derived fromthe Bellman equation. we have:
+![image](https://user-images.githubusercontent.com/26713317/126251741-a68ee1f9-fb73-45ea-be86-5772ba946835.png)
+
+The section in green represents the target. We can argue that it is predicting its own value, but since R is the unbiased true reward, the network is going to update its gradient using backpropagation to finally converge.
+
+## Model Summary 
+
+![dqn](https://user-images.githubusercontent.com/26713317/126251622-afd3dbc9-372e-4f79-a8fb-45fa5723891f.png)
+
 
