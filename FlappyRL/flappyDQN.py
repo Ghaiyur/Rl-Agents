@@ -4,10 +4,13 @@ import numpy as np
 import flappy_bird_gym
 from collections import deque
 import keras
-from tensorflow.keras.models import load_model, save_model, Sequential
-from keras.layers import Input, Dense
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Input, Dense
 from tensorflow.keras.optimizers import RMSprop
 import tensorflow
+
+from keras.models import save_model
+from keras.models import load_model
 
 # Neural Network For Agent
 
@@ -45,7 +48,7 @@ class DQNAgent:
         self.epsilon_min = 0.01
         self.batch_number = 256
 
-        self.train_start = 1000
+        self.train_start = 257
         self.jump_prob = 0.01
         self.model = NN(input_shape=(self.state_space,),
                         output_shape=self.action_space)
@@ -89,6 +92,10 @@ class DQNAgent:
         self.model.fit(state, target, batch_size=self.batch_number,
                        verbose=0)
 
+    def get_config(self):
+        cfg = super().get_config()
+        return cfg
+
     def train(self):
         # n episodes iters
         for i in range(self.episodes):
@@ -119,14 +126,15 @@ class DQNAgent:
                     print('Episode: {}\nScore: {}\nEpsilon: {}'.format(
                         i, score, self.epsilon))
                     # Save Model
-                    if score >= 1000:
-                        self.model.save_model('flappybb.h5')
+                    if score >= 7000:
+                        self.model.save(
+                            'my_model.h5', save_format='h5', overwrite=True)
                         return
 
                 self.learn()
 
     def perform(self):
-        self.model = load_model('flappybb.h5')
+        self.model = load_model('my_model.h5')
         while 1:
             state = self.env.reset()
             state = np.reshape(state, [1, self.state_space])
@@ -140,7 +148,8 @@ class DQNAgent:
                 state = np.reshape(next_state, [1, self.state_space])
                 score += 1
 
-                print('Current Score: {]'.format(score))
+                print('Current Score: {}'.format(
+                    score))
 
                 if done:
                     print('DEAD')
@@ -148,6 +157,7 @@ class DQNAgent:
 
 
 if __name__ == '__main__':
+    env = flappy_bird_gym.make('FlappyBird-v0')
     agent = DQNAgent()
     agent.train()
     agent.perform()
